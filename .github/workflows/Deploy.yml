@@ -1,10 +1,5 @@
 name: Deploy to TER
 
-on:
-  push:
-    tags:
-      - "**"
-
 jobs:
   TER:
     runs-on: ubuntu-latest

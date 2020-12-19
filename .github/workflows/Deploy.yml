@@ -1,5 +1,7 @@
 name: Deploy to TER
 
+on: [push, pull_request]
+
 jobs:
   TER:
     runs-on: ubuntu-latest

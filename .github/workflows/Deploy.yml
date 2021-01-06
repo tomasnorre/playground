@@ -23,7 +23,7 @@ jobs:
 
       - name: Deploy to TER
         run: |
-          echo -e "Preparing upload of release ${TRAVIS_TAG} to TER\n";
+          echo -e "Preparing upload of release ${GITHUB_REF} to TER\n";
 
           # Install ter client
           composer global require helhum/ter-client
@@ -31,5 +31,5 @@ jobs:
           # Upload
           TAG_MESSAGE=`git log -1 --pretty=%B`
           echo "Tag-Message: ${TAG_MESSAGE}"
-          echo "Uploading release ${TRAVIS_TAG} to TER"
+          echo "Uploading release ${GITHUB_REF} to TER"
           $HOME/.composer/vendor/helhum/ter-client/ter-client --version

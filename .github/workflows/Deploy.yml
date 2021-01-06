@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - uses: actions/checkout@v2
       - id: composer-cache
         run: echo "::set-output name=dir::$(composer config cache-files-dir)"
@@ -21,9 +22,13 @@ jobs:
           php-version: 7.4
           coverage: none
 
+      - name: "Determine tag"
+        id: "determine-tag"
+        run: "echo \"::set-output name=tag::${GITHUB_REF#refs/tags/}\""
+
       - name: Deploy to TER
         run: |
-          echo -e "Preparing upload of release ${GITHUB_REF} to TER\n";
+          echo -e "Preparing upload of release ${{ steps.determine-tag.outputs.tag }} to TER\n";
 
           # Install ter client
           composer global require helhum/ter-client
@@ -31,5 +36,5 @@ jobs:
           # Upload
           TAG_MESSAGE=`git log -1 --pretty=%B`
           echo "Tag-Message: ${TAG_MESSAGE}"
-          echo "Uploading release ${GITHUB_REF} to TER"
+          echo "Uploading release ${{ steps.determine-tag.outputs.tag }} to TER"
           $HOME/.composer/vendor/helhum/ter-client/ter-client --version

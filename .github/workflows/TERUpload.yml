@@ -11,6 +11,5 @@ jobs:
       - uses: actions/checkout@v1
       - uses: tomasnorre/typo3-upload-ter@init
         with:
-          extkey: 'my_extension'
           username: ${{ secrets.TYPO3_ORG_USERNAME }}
           password: ${{ secrets.TYPO3_ORG_PASSWORD }}

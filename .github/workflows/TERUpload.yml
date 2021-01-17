@@ -1,0 +1,17 @@
+name: TERUpload
+
+on: [ push, pull_request ]
+
+jobs:
+  S3Upload:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v1
+      - uses: tomasnorre/typo3-upload-ter@dev-init
+        with:
+          extensionkey: 'my_extension'
+          tag: '0.0.1'
+          username: 'my_username'
+          password: 'my_password'

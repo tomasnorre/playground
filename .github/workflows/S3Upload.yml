@@ -1,4 +1,4 @@
-name: Acceptance Tests
+name: S3Upload
 
 on: [ push, pull_request ]
 

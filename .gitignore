@@ -1,1 +1,10 @@
+
+# Files
+/chromedriver
+/composer.lock
+/php.log.txt
+/wait-for-it.sh
+
+#Folders
 .idea
+/vendor/

@@ -1,0 +1,23 @@
+modules:
+  config:
+    WebDriver:
+      port: 9515
+      url: http://GITHUB_DOMAIN/
+      browser: chrome
+      host: 'localhost'
+      clear_cookies: true
+      cleanSession: true
+      window_size: '1920x1080'
+      capabilities:
+        name: 'tests'
+        chromeOptions:
+          w3c: false
+          args: [ "--disable-gpu", "--headless", "--disable-dev-shm-usage", "--no-sandbox", "--disable-extensions", "--hide-scrollbars" ]
+    #Db:
+    #  dsn: 'mysql:host=localhost'
+    #  user: '%DB_USERNAME%'
+    #  password: '%DB_PASSWORD%'
+    #  initial_queries:
+    #    - 'CREATE DATABASE IF NOT EXISTS typo3_ghademo;'
+    #    - 'USE typo3_ghademo;'
+    #    - 'SET NAMES utf8;'

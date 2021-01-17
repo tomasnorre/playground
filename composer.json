@@ -16,5 +16,10 @@
         "typo3/cms": {
             "extension-key": "tomasnorre_playground"
         }
+    },
+    "scripts": {
+        "prepare-release": [
+            "rm -rf README.md"
+        ]
     }
 }

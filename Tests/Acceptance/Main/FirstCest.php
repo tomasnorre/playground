@@ -9,7 +9,7 @@ class FirstCest
     public function phpVersionTest(AcceptanceTester $I)
     {
         $I->amOnPage('/');
-        $I->see('PHP Version 7.4.14');
+        $I->see('PHP Version 7.4');
         $I->dontSee('Tomas Mikkelsen');
     }
 }

@@ -9,7 +9,7 @@ jobs:
       fail-fast: false
     steps:
       - uses: actions/checkout@v1
-      - uses: tomasnorre/typo3-upload-ter@dev-init
+      - uses: tomasnorre/typo3-upload-ter@init
         with:
           extensionkey: 'my_extension'
           tag: '0.0.1'

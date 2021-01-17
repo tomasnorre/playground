@@ -3,7 +3,7 @@ name: TERUpload
 on: [ push, pull_request ]
 
 jobs:
-  S3Upload:
+  TERUpload:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

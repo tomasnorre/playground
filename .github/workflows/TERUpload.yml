@@ -12,6 +12,5 @@ jobs:
       - uses: tomasnorre/typo3-upload-ter@init
         with:
           extkey: 'my_extension'
-          tag: '0.0.1'
-          username: 'my_username'
-          password: 'my_password'
+          username: ${{ secrets.TYPO3_ORG_USERNAME }}
+          password: ${{ secrets.TYPO3_ORG_PASSWORD }}

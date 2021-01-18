@@ -1,4 +1,4 @@
-name: TERUpload
+name: TAGS2
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - "v2*"
 
 jobs:
-  TERUpload:
+  TAG2:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

@@ -1,0 +1,15 @@
+name: TERUpload
+
+on:
+  push:
+    tags:
+      - "v1*"
+
+jobs:
+  TERUpload:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v1
+      - run: echo "v1 tag"

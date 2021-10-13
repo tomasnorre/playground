@@ -1,0 +1,14 @@
+name: Branch
+on: [push, pull_request]
+
+jobs:
+  branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: exit 0
+        run: exit 0 
+
+      - name: Exit 1
+        run: exit 1

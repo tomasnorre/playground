@@ -1,0 +1,22 @@
+name: Branch & Path
+
+on:
+  pull_request:
+    branch: "**"
+    paths:
+      - '.github/workflows/BranchAndPath.yml'
+      - 'README.md'
+  push:
+    branches:
+      - "main"
+    paths: 
+      - '.github/workflows/BranchAndPath.yml'
+      - 'README.md'
+
+
+jobs:
+  branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: echo "I'm running !!"

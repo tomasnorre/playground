@@ -7,8 +7,6 @@ on:
     paths:
       - '.github/workflows/BranchAndPath.yml'
       - 'README.md'
-    paths-ignore:
-      - 'Todo.md'
   push:
     branches:
       - "main"

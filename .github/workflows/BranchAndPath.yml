@@ -2,7 +2,8 @@ name: Branch & Path
 
 on:
   pull_request:
-    branch: "**"
+    branch: 
+      - "**"
     paths:
       - '.github/workflows/BranchAndPath.yml'
       - 'README.md'

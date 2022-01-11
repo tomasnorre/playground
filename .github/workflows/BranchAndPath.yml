@@ -20,7 +20,8 @@ jobs:
   branch:
     runs-on: ubuntu-latest
     steps:
+      - run: echo ::set-env name=REPO_NAME::${{ github.event.repository.name }}
       - uses: actions/checkout@v1
       - run: | 
           echo "I'm running !!"
-          echo "${{ github.event.pull_request.base.ref }}"
+          echo "${{ github.event.repository.name }}"

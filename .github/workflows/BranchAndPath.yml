@@ -27,5 +27,5 @@ jobs:
           echo "${{ github.repository }}"
           echo "$GITHUB_WORKSPACE"
           echo "TOMAS" > tomas.txt
-          sed -i 's/TOMAS/$GITHUB_WORKSPACE/g' tomas.txt
+          sed -i 's/TOMAS/`echo $GITHUB_WORKSPACE`/g' tomas.txt
           cat tomas.txt
